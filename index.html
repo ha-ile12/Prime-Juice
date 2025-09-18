@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo - Premium Juice Selection | Sip into Freshness</title>
+    <meta name="description" content="Discover vibrant flavors with Primo's premium juice selection. Caramel Crave, Sublime Lime, and Creamy Coffee flavors made from nature's finest ingredients.">
+    <meta name="keywords" content="premium juice, natural ingredients, caramel, lime, coffee, fresh juice, primo drinks">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Hero Section -->
+<div class="hero-section" id="heroSection">
+    <!-- Navigation -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <div class="logo">Prime</div>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Bubbles -->
+    <div class="floating-bubbles">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+        <div class="bubble bubble-6"></div>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="hero-content">
+        <div class="content-container">
+            <!-- Left Content -->
+            <div class="left-content">
+                <div>
+                    <h1 class="hero-title">
+                        Sip into<br>
+                        Freshness
+                    </h1>
+                    <p class="size-text" id="selectedSize">500ml</p>
+                </div>
+
+                <div>
+                    <p class="description">
+                        Discover a world of vibrant flavors with our premium 
+                        juice selection. Made from nature's finest ingredients 
+                        for pure refreshment.
+                    </p>
+
+                    <div class="size-selector">
+                        <span class="size-label">Size:</span>
+                        <div class="size-buttons">
+                            <button class="size-btn" data-size="300ml">300ml</button>
+                            <button class="size-btn active" data-size="500ml">500ml</button>
+                            <button class="size-btn" data-size="750ml">750ml</button>
+                        </div>
+                    </div>
+
+                    <div class="purchase-section">
+                        <div class="price">$25.50</div>
+                        <button class="buy-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Content - Product -->
+            <div class="center-content">
+                <div class="product-container">
+                    <img src="imgs/caramel.png" alt="Primo Caramel Crave" class="product-image" id="productImage">
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="right-content">
+                <div class="flavor-info">
+                    <div class="flavor-subtitle">Caramel Flavour</div>
+                    <h2 id="flavorName">Caramel Crave</h2>
+                    
+                    <div class="flavor-selector">
+                        <img src="imgs/caramel.png" alt=""  class="flavor-btn active" data-flavor="caramel">
+                        <img src="imgs/lime.png" alt=""  class="flavor-btn lime" data-flavor="lime">
+                        <img src="imgs/coffe.png" alt=""  class="flavor-btn coffee" data-flavor="coffee">
+                    </div>
+                </div>
+
+                <div class="product-features">
+                    <div>Premium Quality</div>
+                    <div>Natural Ingredients</div>
+                    <div>Fresh & Delicious</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<section class="about-section section" id="about">
+    <div class="section-container">
+        <div class="about-container">
+            <!-- Left Content -->
+            <div>
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <div class="section-subtitle about-content">About Primo</div>
+                    <h2 class="section-title about-content">
+                        Crafted with Passion, 
+                        <span style="color: var(--about-accent)">Sipped with Joy</span>
+                    </h2>
+                    <p class="section-description about-content" style="margin: 0; max-width: none;">
+                        At Primo, we believe that every sip should be an experience. Our premium juice collection 
+                        combines the finest natural ingredients with innovative flavor profiles to create beverages 
+                        that energize your body and delight your senses.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="about-features features-container">
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-leaf"></i></div>
+                        <span>Premium Natural Ingredients</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-bolt"></i></div>
+                        <span>Fresh & Energizing Flavors</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-trophy"></i></div>
+                        <span>Award-Winning Taste</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-check"><i class="fas fa-recycle"></i></div>
+                        <span>Eco-Friendly Packaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content - Stats -->
+            <div class="about-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Unique Flavors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Natural Ingredients</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5★</div>
+                        <div class="stat-label">Average Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section section" id="services">
+    <div class="section-container">
+        <!-- Header -->
+        <div class="section-header services-header">
+            <div class="section-subtitle">Our Services</div>
+            <h2 class="section-title">
+                More Than Just 
+                <span style="color: var(--about-accent)">Great Juice</span>
+            </h2>
+            <p class="section-description">
+                We're committed to providing exceptional service that goes beyond just delivering premium beverages.
+            </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon caramel"><i class="fas fa-truck"></i></div>
+                <h3 class="service-title">Fast Delivery</h3>
+                <p class="service-description">Same-day delivery available in major cities. Get your favorite Primo juices delivered fresh to your doorstep.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon lime"><i class="fas fa-paint-brush"></i></div>
+                <h3 class="service-title">Custom Blends</h3>
+                <p class="service-description">Create your perfect juice blend with our custom mixing service. Personalized flavors just for you.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon coffee"><i class="fas fa-briefcase"></i></div>
+                <h3 class="service-title">Corporate Catering</h3>
+                <p class="service-description">Premium juice catering for corporate events, meetings, and special occasions. Impress your guests.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon caramel"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="service-title">Mobile App</h3>
+                <p class="service-description">Order easily through our mobile app with exclusive flavors, loyalty rewards, and instant notifications.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon lime"><i class="fas fa-globe"></i></div>
+                <h3 class="service-title">Eco Initiative</h3>
+                <p class="service-description">Sustainable packaging and carbon-neutral delivery options. Taste good, feel good about the planet.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon coffee"><i class="fas fa-gift"></i></div>
+                <h3 class="service-title">Gift Packages</h3>
+                <p class="service-description">Beautiful gift sets and subscription boxes. Share the joy of premium juices with your loved ones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section section" id="team">
+    <div class="section-container">
+        <!-- Header -->
+        <div class="section-header team-header">
+            <div class="section-subtitle">Meet Our Team</div>
+            <h2 class="section-title">
+                The People Behind 
+                <span style="color: var(--about-accent)">the Magic</span>
+            </h2>
+            <p class="section-description">
+                Our passionate team of experts work tirelessly to bring you the finest juice experience possible.
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Sarah Johnson - Head of Flavor Innovation" class="avatar-image">
+                </div>
+                <h3 class="team-name">Sarah Johnson</h3>
+                <div class="team-role">Head of Flavor Innovation</div>
+                <p class="team-bio">Passionate about creating unique taste experiences with 10+ years in beverage development.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Marcus Chen - Quality Control Manager" class="avatar-image">
+                </div>
+                <h3 class="team-name">Marcus Chen</h3>
+                <div class="team-role">Quality Control Manager</div>
+                <p class="team-bio">Ensures every bottle meets our premium standards through rigorous testing and quality assurance.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Emma Rodriguez - Sustainability Director" class="avatar-image">
+                </div>
+                <h3 class="team-name">Emma Rodriguez</h3>
+                <div class="team-role">Sustainability Director</div>
+                <p class="team-bio">Leading our eco-friendly initiatives and sustainable packaging innovations for a greener future.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="David Kim - Customer Experience Lead" class="avatar-image">
+                </div>
+                <h3 class="team-name">David Kim</h3>
+                <div class="team-role">Customer Experience Lead</div>
+                <p class="team-bio">Dedicated to creating exceptional customer journeys and building lasting relationships.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1414970307661-e6e661691628?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Lisa Thompson - Creative Director" class="avatar-image">
+                </div>
+                <h3 class="team-name">Lisa Thompson</h3>
+                <div class="team-role">Creative Director</div>
+                <p class="team-bio">Crafting visually stunning brand experiences and packaging that reflects our premium quality.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200&q=80" alt="Alex Morgan - Operations Manager" class="avatar-image">
+                </div>
+                <h3 class="team-name">Alex Morgan</h3>
+                <div class="team-role">Operations Manager</div>
+                <p class="team-bio">Streamlining our production processes to deliver fresh, high-quality juices efficiently.</p>
+                <div class="team-socials">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section section" id="contact">
+    <div class="section-container">
+        <!-- Header -->
+        <div class="section-header contact-header">
+            <div class="section-subtitle">Get In Touch</div>
+            <h2 class="section-title">
+                Let's Start a 
+                <span style="color: var(--about-accent)">Conversation</span>
+            </h2>
+            <p class="section-description">
+                Have questions about our juices or want to share feedback? We'd love to hear from you.
+            </p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--about-text);">Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group form-element">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group form-element">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group form-element">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        🎉 Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon location"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-details">
+                        <h4>Visit Our Store</h4>
+                        <p>123 Juice Street, Flavor City, FC 12345</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon phone"><i class="fas fa-phone"></i></div>
+                    <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p>+1 (555) 123-JUICE</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon email"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>hello@primo-juice.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon hours"><i class="fas fa-clock"></i></div>
+                    <div class="contact-details">
+                        <h4>Store Hours</h4>
+                        <p>Mon-Sat: 8AM-8PM, Sun: 10AM-6PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
